@@ -1,0 +1,78 @@
+-
+  const mainSkillsList = [
+    {
+      icon: '/images/icons/stack/JavaScript.svg',
+      title: 'JavaScript',
+      color: 'rgba(244, 222, 78, 0.3)',
+    },
+    {
+      icon: '/images/icons/stack/TypeScript.svg',
+      title: 'TypeScript',
+      color: 'rgba(11, 47, 90, 0.3)',
+    },
+    {
+      icon: '/images/icons/stack/React.svg',
+      title: 'React',
+      color: 'rgba(129, 219, 248, 0.3)',
+    },
+    {
+      icon: '/images/icons/stack/Redux.svg',
+      title: 'Redux',
+      color: 'rgba(224, 79, 255, 0.3)',
+    },
+  ];
+  const additionalSkillsList = [
+    {
+      icon: '/images/icons/stack/additionally/redux-saga.svg',
+      title: 'Redux-Saga',
+    },
+    {
+      icon: '/images/icons/stack/additionally/mobx.svg',
+      title: 'MobX',
+    },
+    {
+      icon: '/images/icons/stack/additionally/docker.svg',
+      title: 'Docker',
+    },
+    {
+      icon: '/images/icons/stack/additionally/gitlab.svg',
+      title: 'GitLab CI/CD',
+    },
+    {
+      icon: '/images/icons/stack/additionally/mongodb.svg',
+      title: 'MongoDB',
+    },
+    {
+      icon: '/images/icons/stack/additionally/sass-scss.svg',
+      title: 'SASS/SCSS',
+    },
+    {
+      icon: '/images/icons/stack/additionally/styled-components.png',
+      title: 'styled-components',
+    },
+    {
+      icon: '/images/icons/stack/additionally/antd.svg',
+      title: 'antd',
+    },
+    {
+      icon: '/images/icons/stack/additionally/bootstrap.svg',
+      title: 'Bootstrap',
+    },
+    {
+      icon: '/images/icons/stack/additionally/material-ui.svg',
+      title: 'Material-ui',
+    },
+  ];
+
+.skills
+  .skills__title Skills
+  ul.skills__list
+    each valueMain in mainSkillsList
+      li.skills__item(style={background:valueMain.color})
+        img.skills__item-icon(src= valueMain.icon, alt= valueMain.title)
+        .skills__item-title= valueMain.title
+  ul.skills__additional-list
+    each valueAdditional in additionalSkillsList
+      li.skills__additional-item
+        img.skills__additional-item-icon(src= valueAdditional.icon, alt= valueAdditional.title)
+        .skills__additional-item-title= valueAdditional.title

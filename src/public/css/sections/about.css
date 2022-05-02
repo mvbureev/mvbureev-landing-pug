@@ -1,0 +1,30 @@
+.about {
+  margin: 0 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about__avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.about__content {
+  line-height: 1.04;
+}
+
+.about__name {
+  font-size: 2rem;
+}
+
+.about__position {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.about__description {
+  font-size: 1.2rem;
+  margin: 0 -16px;
+}

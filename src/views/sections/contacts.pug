@@ -1,0 +1,46 @@
+-
+  const contacts = [
+    {
+      icon: `/images/icons/contacts/telegram.svg`,
+      title: `Telegram`,
+      color: `#0088cc`,
+      href: `https://t.me/mvbureev`,
+    },
+    {
+      icon: `/images/icons/contacts/linkedin.svg`,
+      title: `LinkedIn`,
+      color: `#0A66C2`,
+      href: `https://www.linkedin.com/in/bureev/`,
+    },
+    {
+      icon: `/images/icons/contacts/github.svg`,
+      title: `GitHub`,
+      color: `#242424`,
+      href: `https://github.com/mvbureev`,
+    },
+    {
+      icon: `/images/icons/contacts/gitlab.svg`,
+      title: `GitLab`,
+      color: `#D65C38`,
+      href: `https://gitlab.com/mvbureev`,
+    },
+    {
+      icon: `/images/icons/contacts/codewars.svg`,
+      title: `Codewars`,
+      color: `#AE3A22`,
+      href: `https://www.codewars.com/users/mvbureev`,
+    },
+    {
+      icon: `/images/icons/contacts/mail.svg`,
+      title: `Mail`,
+      color: `#151515`,
+      href: `mailto:mvbureev@gmail.com`,
+    },
+  ];
+
+.contacts
+  .contacts__title Links
+  ul.contacts__list
+    each value in contacts
+      li.contacts__item(style={background:value.color}): a.contacts__item-link(href= value.href)
+        img.contacts__item-icon(src= value.icon, alt= value.title)

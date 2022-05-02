@@ -1,43 +1,25 @@
 {
   "name": "landing",
-  "version": "1.0.0",
-  "description": "sass,pug",
-  "main": "index.js",
-  "dependencies": {
-    "normalize.scss": "^0.1.0"
-  },
-  "devDependencies": {
-    "browser-sync": "2.27.9",
-    "gulp": "4.0.2",
-    "gulp-autoprefixer": "8.0.0",
-    "gulp-imagemin": "7.1.0",
-    "gulp-pug": "^5.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-webserver": "0.9.1",
-    "gulp.spritesmith": "6.12.1",
-    "rimraf": "^3.0.2",
-    "sass": "^1.51.0"
-  },
-  "scripts": {
-    "start": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mvbureev/mvbureev-landing-pug.git"
-  },
-  "keywords": [
-    "landing",
-    "pug",
-    "sass"
-  ],
+  "version": "2.0.0",
+  "main": "src/app.js",
   "author": "Maxim Bureev <mvbureev@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mvbureev/mvbureev-landing-pug/issues"
-  },
   "homepage": "https://github.com/mvbureev/mvbureev-landing-pug#readme",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon src/app.js --watch src/*",
+    "prod": "NODE_ENV=production pm2 start src/app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "pug": "*",
+    "serve-favicon": "*",
+    "body-parser": "*",
+    "method-override": "*",
+    "browser-sync": "*",
+    "sass": "*",
+    "nodemon": "*",
+    "compression": "*"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

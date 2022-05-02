@@ -1,0 +1,18 @@
+.cv {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.cv__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 8px calc(12px + 1rem);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+}
+
+.cv__link:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

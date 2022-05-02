@@ -1,0 +1,17 @@
+.container {
+  max-width: var(--max-section-size);
+  margin: 0 auto;
+  padding: calc(32px + 2vw) 16px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 0.75), 
+    rgba(255, 255, 255, 0)
+  );
+}

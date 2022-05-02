@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  margin: 24px 0 0;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin: 0 auto;
+  font-family: monospace;
+  font-size: 0.8rem;
+}

@@ -1,5 +1,4 @@
 .idea/
-build
 node_modules
 npm-debug.log
 .DS_Store
@@ -22,8 +21,6 @@ $RECYCLE.BIN/
 .pnp.js
 
 /coverage
-
-/build
 
 .DS_Store
 *.pem
