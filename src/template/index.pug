@@ -1,0 +1,59 @@
+-
+  const title = `👾 Maxim Bureev - Frontend Engineer - mvbureev`;
+  const description = `👋 Hi! I am a Front-end Engineer. 👾 On this site you will find my skills, contacts, as well as my CV`;
+  const image = `/images/content/social.jpg`;
+
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content="IE=edge")
+    meta(name='viewport' content='width=device-width')
+    meta(key="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="Maxim Bureev")
+    meta(key="application-name" name="application-name" content="Maxim Bureev")
+    meta(key="msapplication-TileColor" name="msapplication-TileColor" content="#051937")
+    meta(key="theme-color" name="theme-color" content="#051937")
+    meta(name="freelancehunt" content="6bd9c0ce1956099")
+    meta(name="description" content= description)
+    meta(property="og:title" content= title)
+    meta(property="og:description" content= description)
+    meta(property="og:image" content= image)
+    meta(property="og:image:width" content="1000")
+    meta(property="og:image:height" content="1000")
+    meta(property="og:image:alt" content="mvbureev")
+    meta(property="og:site_name" content="mvbureev")
+    meta(property="og:url" content="https://mvbureev.com")
+    meta(property="og:type" content="website")
+    script(dangerouslySetInnerHTML={
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-3ZW0090FHG");
+      `,
+    })
+    script(key="googletagmanager" async src="https://www.googletagmanager.com/gtag/js?id=G-3ZW0090FHG")
+    link(rel="canonical" href="https://mvbureev.com")
+    link(key="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png")
+    link(key="favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png")
+    link(key="favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png")
+    link(key="site.webmanifest" rel="manifest" href="/public/site.webmanifest")
+    link(key="safari-pinned-tab.svg" rel="mask-icon" href="/public/safari-pinned-tab.svg" color="#051937")
+    link(rel="stylesheet" href="css/main.min.css")
+    link(
+      rel="search"
+      href="http://localhost:3000/search/search.xml"
+      type="application/search+xml"
+      title= title
+    )
+    title= title
+  body
+    main.container
+      include sections/about
+      include sections/cv
+      hr
+      include sections/skills
+      hr
+      include sections/contacts
+      hr
+      include sections/footer

@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  landing-pug:
+    image: ${COMPOSE_PROJECT_NAME}-pug
+    container_name: ${COMPOSE_PROJECT_NAME}-pug
+    environment:
+      - NODE_ENV
+    networks:
+      - proxy
+    build:
+      dockerfile: Dockerfile
+      context: ./
+      cache_from:
+      - ${COMPOSE_PROJECT_NAME}-pug
+    restart: unless-stopped
+
+  landing-proxy:
+    image: ${COMPOSE_PROJECT_NAME}-proxy
+    container_name: ${COMPOSE_PROJECT_NAME}-proxy
+    environment:
+      - DOMAIN
+      - SUBDOMAIN
+      - COMPOSE_PROJECT_NAME
+    networks:
+      - proxy
+    depends_on:
+      - landing-pug
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+      cache_from:
+      - ${COMPOSE_PROJECT_NAME}-proxy
+    restart: always
+    labels:
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}.rule=Host("${SUBDOMAIN}${DOMAIN}")
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}.entrypoints=https
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}.tls=true
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}.tls.certresolver=${CERT_RESOLVER}
+      - traefik.docker.network=proxy
+      - traefik.http.routers.registry.middlewares=traefik-compress
+
+networks:
+  proxy:
+    external: true
