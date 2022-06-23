@@ -53,10 +53,23 @@ html(lang="en")
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KQFL3PF');
+    script(type='text/javascript').
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(89290707, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+      });
 
   body
     noscript
       iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KQFL3PF' height='0' width='0' style='display:none;visibility:hidden')
+    noscript
+      div
+        img(src='https://mc.yandex.ru/watch/89290707' style='position:absolute; left:-9999px;' alt='')
     main.container
       include sections/about
       hr
