@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mvbureev.com/public/sitemap.xml
+Sitemap: https://mvbureev.com/sitemap.xml
